@@ -6,7 +6,7 @@ O desafio consiste em criar componentes de acordo com especificações de um des
 
 ### Material
 
-- [Handoff dos componentes](https://xd.adobe.com/view/9c6d72e7-b6b4-482f-8008-aee9ddd844c8-c93e/)
+- [Handoff dos componentes](https://xd.adobe.com/view/9789f7fc-9a9f-49b6-a434-0cd07f25c991-c2da/))
 - [Endpoint](https://test-frontend-uolpp.web.app/customers.json)
 
 ### Stack
