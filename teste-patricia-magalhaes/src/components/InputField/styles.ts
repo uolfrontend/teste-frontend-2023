@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
 interface IProps {
-  disabled?: boolean;
   variant: "normal" | "success" | "error";
 }
 
