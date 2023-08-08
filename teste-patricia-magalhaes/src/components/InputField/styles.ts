@@ -9,15 +9,11 @@ export const Container = styled.div<IProps>`
   flex-direction: column;
   position: relative;
 
-  &:focus-within label {
-    color: ${({ theme }) => theme.COLORS["neutral-medium-02"]};
-    font-size: ${({ theme }) => theme.FONTSIZE.nano};
-    transform: translate(0, 12px) scale(0.8);
-  }
-
+  &:focus-within label,
   .filled {
     color: ${({ theme }) => theme.COLORS["neutral-medium-02"]};
-    transform: translate(0, 12px) scale(0.5);
+    font-size: ${({ theme }) => theme.FONTSIZE.nano};
+    transform: translate(0, 6px) scale(0.8);
   }
 
   label {
