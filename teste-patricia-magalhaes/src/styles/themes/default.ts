@@ -1,0 +1,21 @@
+import {
+  COLORS,
+  FONTWEIGHT,
+  FONTSIZE,
+  LINEHEIGHT,
+  SPACING,
+  SPACINGSQUISH,
+  BORDERRADIUS,
+  BORDERWIDTH,
+} from "../tokens";
+
+export const defaultTheme = {
+  COLORS,
+  FONTWEIGHT,
+  FONTSIZE,
+  LINEHEIGHT,
+  SPACING,
+  SPACINGSQUISH,
+  BORDERRADIUS,
+  BORDERWIDTH,
+} as const;
