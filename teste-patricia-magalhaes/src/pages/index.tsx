@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react";
 
-import { db } from "../data/db";
 import { defaultTheme } from "../styles/themes/default";
 import { Button } from "../components/Button";
-
-interface ICustomer {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  status: string;
-}
+import { ICustomerInfo, getAllCustomers } from "../services/customersAPI";
 
 export default function Home() {
-  const [customers, setCustomers] = useState<ICustomer[]>([]);
+  const [customers, setCustomers] = useState<ICustomerInfo[]>([]);
 
   useEffect(() => {
-    setCustomers(db.customers);
+    getAllCustomers().then((response: ICustomerInfo[]) =>
+      setCustomers(response)
+    );
   }, []);
 
   return (
     <>
       <h1>Teste Front-End - UOL Host</h1>
       <Button />
-      {customers.map((customer: ICustomer) => {
+      {customers.map((customer: ICustomerInfo) => {
         return (
           <p
             key={customer.id}
