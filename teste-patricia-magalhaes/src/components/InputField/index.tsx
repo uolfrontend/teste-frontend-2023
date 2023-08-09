@@ -32,6 +32,7 @@ export const InputField = ({
       {label && (
         <label
           className={`${value && "filled"} ${disabled && "disabled-label"}`}
+          htmlFor={id}
         >
           {label}
         </label>
