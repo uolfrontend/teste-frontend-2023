@@ -1,27 +1,99 @@
-# React + TypeScript + Vite
+# Front-End Test - UOL Host
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! This project was developed with the purpose of solving the UOL HOST front-end test.
 
-Currently, two official plugins are available:
+Nice things that could be learned from this project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create a React project using Vite;
+- React.js Functional Components;
+- React useState and useEffect Hook;
+- React composing components;
+- React handling events;
+- React conditional rendering;
+- Javascript Array.map( ), Array.filter( ), Array.forEach( );
+- Javascript String.includes( );
+- Async/await;
+- Create demo API with JSON Server;
+- HTTP request with Axios;
+- List and keys;
+- Typescript;
+- Test with Jest and React testing library.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Technologies
 
-- Configure the top-level `parserOptions` property like this:
+This project was developed using the following technologies:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+**Website** (**[React.js](https://reactjs.org/)** + **[TypeScript](https://www.typescriptlang.org/)**)
+
+- **[Git](https://git-scm.com/doc)**
+- **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
+- **[Styled-Components](https://styled-components.com/)**
+- **[AXIOS](https://axios-http.com/ptbr/docs/intro)**
+- **[JSON Server](https://github.com/typicode/json-server)**
+- **[JEST](https://jestjs.io/)**
+- **[testing-library](https://testing-library.com/)**
+
+---
+
+## ⚠️ Dependencies
+
+Before you begin, you will need to have the following tools installed on your machine: [Git] ([https://git-scm.com](https://git-scm.com/)), [Node.js] ([https://nodejs.org/en/](https://nodejs.org/en/)). In addition, it is good to have an editor to work with the code like [VSCode] ([https://code.visualstudio.com/](https://code.visualstudio.com/))
+
+---
+
+## 📥 Installation and usage
+
+```bash
+
+
+# Clone this repository
+
+$  git clone https://github.com/pmagalhaes2/teste-frontend-2023.git
+
+
+# Access the project folder in your terminal
+
+$  cd teste-frontend-2023
+
+
+# Switch to the branch
+
+$ git checkout teste-patricia-magalhaes
+
+
+# Access the project folder in your terminal
+
+$  cd teste-patricia-magalhaes
+
+
+# Install the dependencies
+
+$  npm install
+
+
+# Start JSON server
+
+$  npm run server
+
+
+# Run the application in development mode
+
+$  npm run dev
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## 🛠 Tests
+
+Run your tests using Jest
+
+```bash
+$  npm run test
+```
+
+---
+
+Made by Patricia Magalhães 💙
