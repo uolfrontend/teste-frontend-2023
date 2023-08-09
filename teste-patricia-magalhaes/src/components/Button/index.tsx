@@ -5,7 +5,7 @@ interface ButtonProps {
   onClick?: () => void;
   size?: "lg" | "md" | "sm";
   title?: string;
-  variant?: "primary" | "secondary";
+  $variant?: "primary" | "secondary";
 }
 
 export const Button = ({
@@ -13,10 +13,10 @@ export const Button = ({
   onClick,
   size = "md",
   title = "Label do botão",
-  variant = "primary",
+  $variant = "primary",
 }: ButtonProps) => {
   return (
-    <Container variant={variant} size={size} disabled={disabled}>
+    <Container $variant={$variant} size={size} disabled={disabled}>
       <button onClick={onClick}>{title}</button>
     </Container>
   );

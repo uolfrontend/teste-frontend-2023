@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface IProps {
   disabled: boolean;
-  variant: "primary" | "secondary";
+  $variant: "primary" | "secondary";
   size: "lg" | "md" | "sm";
 }
 
@@ -12,19 +12,19 @@ export const Container = styled.div<IProps>`
   justify-content: center;
 
   button {
-    background-color: ${({ disabled, theme, variant }) =>
+    background-color: ${({ disabled, theme, $variant }) =>
       disabled
         ? theme.COLORS["action-lightest"]
-        : variant === "primary"
+        : $variant === "primary"
         ? theme.COLORS["action-medium"]
         : "transparent"};
-    border: ${({ theme, variant }) =>
-      variant === "secondary"
+    border: ${({ theme, $variant }) =>
+      $variant === "secondary"
         ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["action-medium"]}`
         : "none"};
     border-radius: ${({ theme }) => theme.BORDERRADIUS.md};
-    color: ${({ theme, variant }) =>
-      variant === "secondary"
+    color: ${({ theme, $variant }) =>
+      $variant === "secondary"
         ? theme.COLORS["action-medium"]
         : theme.COLORS["neutral-lightest"]};
     cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
@@ -45,14 +45,14 @@ export const Container = styled.div<IProps>`
     width: max-content;
 
     &:hover {
-      background-color: ${({ disabled, theme, variant }) =>
+      background-color: ${({ disabled, theme, $variant }) =>
         disabled
           ? theme.COLORS["action-lightest"]
-          : variant === "secondary"
+          : $variant === "secondary"
           ? theme.COLORS["action-medium"]
           : theme.COLORS["action-light"]};
-      color: ${({ theme, variant }) =>
-        variant === "secondary"
+      color: ${({ theme, $variant }) =>
+        $variant === "secondary"
           ? theme.COLORS["neutral-light"]
           : theme.COLORS["neutral-lightest"]};
     }

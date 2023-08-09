@@ -56,7 +56,7 @@ export default function Home() {
             label={"Name"}
             onChange={handleChange}
             value={search}
-            variant={variant}
+            $variant={variant}
           />
           {filtered.length > 0 ? <Table data={filtered} /> : <NotFound />}
         </>

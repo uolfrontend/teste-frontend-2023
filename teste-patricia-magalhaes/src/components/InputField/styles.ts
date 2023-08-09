@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 interface IProps {
-  variant: "normal" | "success" | "error";
+  $variant: "normal" | "success" | "error";
 }
 
 export const Container = styled.div<IProps>`
@@ -46,10 +46,10 @@ export const Container = styled.div<IProps>`
     transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
     &:focus {
-      border: ${({ variant, theme }) =>
-        variant === "normal"
+      border: ${({ $variant, theme }) =>
+        $variant === "normal"
           ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["action-medium"]}`
-          : variant === "success"
+          : $variant === "success"
           ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-success"]}`
           : `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-error"]}`};
       padding: ${({ theme }) => `${theme.SPACING.nano} ${theme.SPACING.xxs}`};

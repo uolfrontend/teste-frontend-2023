@@ -8,7 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   type?: string;
   value?: string;
-  variant?: "normal" | "success" | "error";
+  $variant?: "normal" | "success" | "error";
 }
 
 export const InputField = ({
@@ -18,10 +18,10 @@ export const InputField = ({
   onChange,
   type = "text",
   value,
-  variant = "normal",
+  $variant = "normal",
 }: InputProps) => {
   return (
-    <Container variant={variant}>
+    <Container $variant={$variant}>
       <input
         disabled={disabled}
         id={id}
