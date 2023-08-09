@@ -8,12 +8,12 @@ export const Container = styled.div`
   gap: 0.5rem;
 
   h2 {
-    color: ${({ theme }) => theme.COLORS["neutral-medium-04"]};
+    color: ${({ theme }) => theme.COLORS["neutral-medium-01"]};
     font-weight: ${({ theme }) => theme.FONTWEIGHT.medium};
   }
 
   p {
-    color: ${({ theme }) => theme.COLORS["neutral-medium-03"]};
+    color: ${({ theme }) => theme.COLORS["neutral-medium-01"]};
     font-weight: ${({ theme }) => theme.FONTWEIGHT.light};
   }
 `;

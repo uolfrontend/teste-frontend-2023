@@ -10,6 +10,8 @@ export const Container = styled.div`
   padding: ${({ theme }) => theme.SPACING.xl};
   width: 100%;
   height: 100vh;
+  background: url('https://i.ibb.co/YpB94kY/Blue-Abstract-Background-free-Vector-image.png') center;
+  background-size: contain;
 
   header {
     h1 {
