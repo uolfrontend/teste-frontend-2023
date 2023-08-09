@@ -61,4 +61,53 @@ describe("Home Component", () => {
 
     screen.debug();
   });
+
+  it("should filter and display customers based on search input", async () => {
+    render(
+      <ThemeProvider theme={defaultTheme}>
+        <Home />
+      </ThemeProvider>
+    );
+
+    fireEvent.click(screen.getByText("Load data"));
+
+    await screen.findByRole("table");
+
+    const searchInput = screen.getByRole("textbox");
+    fireEvent.change(searchInput, {
+      target: { value: "carlosferraz@email.com" },
+    });
+
+    await waitFor(() => {
+      const tableRows = screen.getAllByRole("row");
+
+      const filteredContent = "carlosferraz@email.com";
+      const isFilteredContentPresent = tableRows.some((cell) =>
+        cell.textContent?.includes(filteredContent)
+      );
+
+      expect(isFilteredContentPresent).toBe(true);
+    });
+  });
+
+  it("should display not found message if customer not found", async () => {
+    render(
+      <ThemeProvider theme={defaultTheme}>
+        <Home />
+      </ThemeProvider>
+    );
+
+    fireEvent.click(screen.getByText("Load data"));
+
+    await screen.findByRole("table");
+
+    const searchInput = screen.getByRole("textbox");
+    fireEvent.change(searchInput, {
+      target: { value: "invalidsearch" },
+    });
+
+    const notFoundMessage = screen.queryByText("Customer not found!");
+
+    expect(notFoundMessage).toBeInTheDocument();
+  });
 });
