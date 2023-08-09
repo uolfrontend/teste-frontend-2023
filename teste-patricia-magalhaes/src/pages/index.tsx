@@ -5,6 +5,7 @@ import { ICustomerInfo, getAllCustomers } from "../services/customersAPI";
 import { InputField } from "../components/InputField";
 import { Table } from "../components/Table";
 import { NotFound } from "../components/NotFound";
+import { Container } from "../components/Container/styles";
 
 export default function Home() {
   const [customers, setCustomers] = useState<ICustomerInfo[]>([]);
@@ -40,23 +41,13 @@ export default function Home() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "5rem",
-        padding: "5rem",
-        width: "100%",
-      }}
-    >
+    <Container>
       <header>
-        <h1>Teste Front-End - UOL Host</h1>
+        <h1>Front-End Test - UOL Host</h1>
       </header>
 
       {customers.length === 0 && (
-        <Button title={"Carregar dados"} onClick={handleClick} />
+        <Button title={"Load data"} onClick={handleClick} />
       )}
 
       {customers.length > 0 && (
@@ -70,6 +61,6 @@ export default function Home() {
           {filtered.length > 0 ? <Table data={filtered} /> : <NotFound />}
         </>
       )}
-    </div>
+    </Container>
   );
 }

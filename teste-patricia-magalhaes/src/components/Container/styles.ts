@@ -1,0 +1,25 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  background-color: ${({ theme }) => theme.COLORS["neutral-lightest"]};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: ${({ theme }) => theme.SPACING.xl};
+  width: 100%;
+  height: 100vh;
+
+  header {
+    h1 {
+      color: ${({ theme }) => theme.COLORS["action-dark"]};
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: ${({ theme }) => theme.SPACING.md};
+    text-align: center;
+  }
+`;
