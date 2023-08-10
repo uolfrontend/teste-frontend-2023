@@ -55,4 +55,8 @@ export const Container = styled.div<IProps>`
       padding: ${({ theme }) => `${theme.SPACING.nano} ${theme.SPACING.xxs}`};
     }
   }
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 `;
