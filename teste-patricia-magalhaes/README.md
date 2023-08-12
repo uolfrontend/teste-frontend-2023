@@ -17,7 +17,8 @@ Nice things that could be learned from this project:
 - HTTP request with Axios;
 - List and keys;
 - Typescript;
-- Test with Jest and React testing library.
+- Test with Jest and React testing library;
+- Share data through Context.
 
 ---
 
