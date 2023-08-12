@@ -4,6 +4,7 @@ import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 import { defaultTheme } from "../styles/themes/default";
 import Home from "./index";
+import { CustomerContextProvider } from "../context/CustomersContext";
 
 describe("Home Component", () => {
   let axiosMock: MockAdapter;
@@ -40,13 +41,26 @@ describe("Home Component", () => {
 
   beforeAll(() => {
     axiosMock = new MockAdapter(axios);
+
+    // Mock useCustomerContext hook
+    jest.mock("../hooks/useCustomerContext", () => ({
+      useCustomerContext: () => ({
+        filtered: [],
+        setFiltered: jest.fn(),
+        columns: [],
+        setColumns: jest.fn(),
+      }),
+    }));
+
   });
   it("should fetch and show customers on button click", async () => {
     axiosMock.onGet("http://localhost:3000/customers").reply(200, dataMock);
 
     render(
       <ThemeProvider theme={defaultTheme}>
-        <Home />
+        <CustomerContextProvider>
+          <Home />
+        </CustomerContextProvider>
       </ThemeProvider>
     );
 
@@ -58,14 +72,14 @@ describe("Home Component", () => {
 
       expect(tableRows.length).toBe(dataMock.length + 1);
     });
-
-    screen.debug();
   });
 
   it("should filter and display customers based on search input", async () => {
     render(
       <ThemeProvider theme={defaultTheme}>
-        <Home />
+        <CustomerContextProvider>
+          <Home />
+        </CustomerContextProvider>
       </ThemeProvider>
     );
 
@@ -93,7 +107,9 @@ describe("Home Component", () => {
   it("should display not found message if customer not found", async () => {
     render(
       <ThemeProvider theme={defaultTheme}>
-        <Home />
+        <CustomerContextProvider>
+          <Home />
+        </CustomerContextProvider>
       </ThemeProvider>
     );
 

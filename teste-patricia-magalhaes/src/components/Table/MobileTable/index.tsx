@@ -1,16 +1,13 @@
-import { ICustomerInfo } from "../../../services/customersAPI";
+import { useCustomerContext } from "../../../hooks/useCustomerContext";
 import { Table } from "./styles";
 
-interface TableProps {
-  data: ICustomerInfo[];
-  columns: string[];
-}
+export const MobileTable = () => {
+  const { filtered, columns } = useCustomerContext();
 
-export const MobileTable = ({ data, columns }: TableProps) => {
   return (
     <Table>
       <tbody>
-        {data.map((item, index) => (
+        {filtered.map((item, index) => (
           <tr key={item.id}>
             <th>{columns[0]}</th>
             <td>{index + 1}</td>

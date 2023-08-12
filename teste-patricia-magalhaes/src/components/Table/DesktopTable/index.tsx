@@ -1,12 +1,9 @@
 import { Table, DotGreen, DotGrey, DotRed, DotYellow } from "./styles";
-import { ICustomerInfo } from "../../../services/customersAPI";
+import { useCustomerContext } from "../../../hooks/useCustomerContext";
 
-interface TableProps {
-  data: ICustomerInfo[];
-  columns: string[];
-}
+export const DesktopTable = () => {
+  const { filtered, columns } = useCustomerContext();
 
-export const DesktopTable = ({ data, columns }: TableProps) => {
   const statusChecher = (status: string) => {
     switch (status) {
       case "active":
@@ -35,7 +32,7 @@ export const DesktopTable = ({ data, columns }: TableProps) => {
       </thead>
 
       <tbody>
-        {data.map((item, index) => (
+        {filtered.map((item, index) => (
           <tr key={item.id}>
             <td>{index + 1}</td>
             <td>{item.name}</td>

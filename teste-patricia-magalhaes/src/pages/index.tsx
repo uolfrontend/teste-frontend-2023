@@ -6,11 +6,13 @@ import { InputField } from "../components/InputField";
 import { Table } from "../components/Table";
 import { NotFound } from "../components/NotFound";
 import { Container } from "../components/Container/styles";
+import { useCustomerContext } from "../hooks/useCustomerContext";
 
 export default function Home() {
+  const { filtered, setFiltered, setColumns } = useCustomerContext();
+
   const [customers, setCustomers] = useState<ICustomerInfo[]>([]);
   const [search, setSearch] = useState("");
-  const [filtered, setFiltered] = useState<ICustomerInfo[]>([]);
   const [variant, setVariant] = useState<"normal" | "success" | "error">(
     "normal"
   );
@@ -28,12 +30,15 @@ export default function Home() {
     } else {
       return setVariant("error");
     }
-  }, [customers, search, filtered.length]);
+  }, [customers, search, filtered.length, setFiltered]);
 
   const handleClick = () => {
-    getAllCustomers().then((response: ICustomerInfo[]) =>
-      setCustomers(response)
-    );
+    getAllCustomers().then((response: ICustomerInfo[]) => {
+      setCustomers(response);
+      setColumns(
+        Object.keys(response[0]).map((column) => column.toUpperCase())
+      );
+    });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -58,7 +63,7 @@ export default function Home() {
             value={search}
             $variant={variant}
           />
-          {filtered.length > 0 ? <Table data={filtered} /> : <NotFound />}
+          {filtered.length > 0 ? <Table /> : <NotFound />}
         </>
       )}
     </Container>
