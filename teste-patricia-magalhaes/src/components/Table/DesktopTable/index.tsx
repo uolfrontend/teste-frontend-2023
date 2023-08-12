@@ -31,7 +31,7 @@ export const DesktopTable = () => {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody data-testid="desktop-table">
         {filtered.map((item, index) => (
           <tr key={item.id}>
             <td>{index + 1}</td>

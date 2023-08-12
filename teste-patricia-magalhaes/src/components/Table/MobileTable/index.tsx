@@ -6,7 +6,7 @@ export const MobileTable = () => {
 
   return (
     <Table>
-      <tbody>
+      <tbody data-testid="mobile-table">
         {filtered.map((item, index) => (
           <tr key={item.id}>
             <th>{columns[0]}</th>
