@@ -7,7 +7,7 @@ import {
 } from "react";
 import { ICustomerInfo } from "../services/customersAPI";
 
-interface CustomerContextData {
+export interface CustomerContextData {
   filtered: ICustomerInfo[];
   setFiltered: Dispatch<SetStateAction<ICustomerInfo[]>>;
   columns: string[];
