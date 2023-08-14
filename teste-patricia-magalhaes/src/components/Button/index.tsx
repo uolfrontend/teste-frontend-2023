@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-interface ButtonProps {
+export interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   size?: "lg" | "md" | "sm";

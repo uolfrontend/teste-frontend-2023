@@ -5,39 +5,10 @@ import MockAdapter from "axios-mock-adapter";
 import { defaultTheme } from "../styles/themes/default";
 import Home from "./index";
 import { CustomerContextProvider } from "../context/CustomersContext";
+import customers from "../../.jest/mocks/dataMock";
 
 describe("Home Component", () => {
   let axiosMock: MockAdapter;
-  const dataMock = [
-    {
-      id: "1",
-      name: "Camila Souza",
-      email: "camila.souza@email.com",
-      phone: "(11) 93463-2347",
-      status: "active",
-    },
-    {
-      id: "2",
-      name: "Pedro Ferreira",
-      email: "peferreira@email.com",
-      phone: "(11) 95529-5678",
-      status: "inactive",
-    },
-    {
-      id: "3",
-      name: "Marcela Silva",
-      email: "masilva@email.com",
-      phone: "(11) 93470-3391",
-      status: "waiting",
-    },
-    {
-      id: "4",
-      name: "Carlos Ferraz",
-      email: "carlosferraz@email.com",
-      phone: "(11) 96744-0233",
-      status: "disabled",
-    },
-  ];
 
   beforeAll(() => {
     axiosMock = new MockAdapter(axios);
@@ -51,10 +22,9 @@ describe("Home Component", () => {
         setColumns: jest.fn(),
       }),
     }));
-
   });
   it("should fetch and show customers on button click", async () => {
-    axiosMock.onGet("http://localhost:3000/customers").reply(200, dataMock);
+    axiosMock.onGet("http://localhost:3000/customers").reply(200, customers);
 
     render(
       <ThemeProvider theme={defaultTheme}>
@@ -70,7 +40,7 @@ describe("Home Component", () => {
     await waitFor(() => {
       const tableRows = screen.getAllByRole("row");
 
-      expect(tableRows.length).toBe(dataMock.length + 1);
+      expect(tableRows.length).toBe(customers.length + 1);
     });
   });
 

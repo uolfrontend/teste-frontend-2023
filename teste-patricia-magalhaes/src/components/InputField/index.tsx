@@ -1,7 +1,7 @@
 import { ChangeEvent, InputHTMLAttributes } from "react";
 import { Container } from "./styles";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   id?: string;
   label?: string;
@@ -21,7 +21,7 @@ export const InputField = ({
   $variant = "normal",
 }: InputProps) => {
   return (
-    <Container $variant={$variant}>
+    <Container $variant={$variant} disabled={disabled}>
       <input
         disabled={disabled}
         id={id}

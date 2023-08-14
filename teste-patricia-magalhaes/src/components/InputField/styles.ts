@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 interface IProps {
+  disabled: boolean;
   $variant: "normal" | "success" | "error";
 }
 
@@ -38,6 +39,7 @@ export const Container = styled.div<IProps>`
       `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["neutral-medium-04"]}`};
     border-radius: ${({ theme }) => theme.BORDERRADIUS.sm};
     color: ${({ theme }) => theme.COLORS["neutral-dark"]};
+    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "normal")};
     font-size: ${({ theme }) => theme.FONTSIZE.xs};
     height: 4rem;
     line-height: ${({ theme }) => theme.LINEHEIGHT.medium};

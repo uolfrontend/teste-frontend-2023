@@ -48,7 +48,6 @@ Before you begin, you will need to have the following tools installed on your ma
 
 ```bash
 
-
 # Clone this repository
 
 $  git clone https://github.com/pmagalhaes2/teste-frontend-2023.git
@@ -68,7 +67,12 @@ $ git checkout teste-patricia-magalhaes
 
 $  cd teste-patricia-magalhaes
 
+```
 
+> Important: Before running the commands below, make sure you are inside the **teste-patricia-magalhaes** folder
+
+
+``` bash
 # Install the dependencies
 
 $  npm install
@@ -89,11 +93,22 @@ $  npm run dev
 
 ## 🛠 Tests
 
-Run your tests using Jest
-
 ```bash
+# Run your tests using Jest
+
 $  npm run test
 ```
+
+---
+
+## Storybook
+```bash
+# Access the design system
+
+$  npm run storybook
+```
+
+
 
 ---
 

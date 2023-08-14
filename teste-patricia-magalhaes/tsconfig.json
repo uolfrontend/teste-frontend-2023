@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", ".jest/mocks/dataMock.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
