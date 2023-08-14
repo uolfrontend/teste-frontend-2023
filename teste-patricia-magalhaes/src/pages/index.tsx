@@ -13,9 +13,10 @@ export default function Home() {
 
   const [customers, setCustomers] = useState<ICustomerInfo[]>([]);
   const [search, setSearch] = useState("");
-  const [variant, setVariant] = useState<"normal" | "success" | "error">(
-    "normal"
-  );
+  const [variant, setVariant] = useState<
+    "normal" | "success" | "error" | "grey"
+  >("grey");
+  const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
     setFiltered(
@@ -23,14 +24,17 @@ export default function Home() {
         customer.email.toLowerCase().includes(search.toLowerCase())
       )
     );
-    if (search === "") {
+
+    if (!isFocused && !search) {
+      return setVariant("grey");
+    } else if (search === "" && isFocused) {
       return setVariant("normal");
     } else if (filtered.length > 0) {
       return setVariant("success");
     } else {
       return setVariant("error");
     }
-  }, [customers, search, filtered.length, setFiltered]);
+  }, [customers, search, filtered.length, isFocused, setFiltered]);
 
   const handleClick = () => {
     getAllCustomers().then((response: ICustomerInfo[]) => {
@@ -43,6 +47,14 @@ export default function Home() {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
   };
 
   return (
@@ -60,6 +72,8 @@ export default function Home() {
           <InputField
             label={"Name"}
             onChange={handleChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             value={search}
             $variant={variant}
           />

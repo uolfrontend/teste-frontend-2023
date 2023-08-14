@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 interface IProps {
   disabled: boolean;
-  $variant: "normal" | "success" | "error";
+  $variant: "normal" | "success" | "error" | "grey";
 }
 
 export const Container = styled.div<IProps>`
@@ -35,8 +35,16 @@ export const Container = styled.div<IProps>`
 
   input {
     background-color: ${({ theme }) => theme.COLORS["neutral-lightest"]};
-    border: ${({ theme }) =>
-      `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["neutral-medium-04"]}`};
+    border: ${({ $variant, theme }) =>
+      $variant === "normal"
+        ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["action-medium"]}`
+        : $variant === "success"
+        ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-success"]}`
+        : $variant === "error"
+        ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-error"]}`
+        : $variant === "grey"
+        ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["neutral-medium-04"]}`
+        : `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["neutral-medium-04"]}`};
     border-radius: ${({ theme }) => theme.BORDERRADIUS.sm};
     color: ${({ theme }) => theme.COLORS["neutral-dark"]};
     cursor: ${({ disabled }) => (disabled ? "not-allowed" : "normal")};
@@ -48,17 +56,11 @@ export const Container = styled.div<IProps>`
     transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
     &:focus {
-      border: ${({ $variant, theme }) =>
-        $variant === "normal"
-          ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["action-medium"]}`
-          : $variant === "success"
-          ? `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-success"]}`
-          : `${theme.BORDERWIDTH.xs} solid ${theme.COLORS["alert-error"]}`};
       padding: ${({ theme }) => `${theme.SPACING.nano} ${theme.SPACING.xxs}`};
     }
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
