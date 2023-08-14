@@ -30,3 +30,12 @@ Default.args = {
   setQueryType: (value: string) => console.log('User search query:', value),
   queryType: 'email'
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: 'select desabilitado',
+  disabled: true,
+  options: ['id', 'name', 'email', 'phone', 'status'],
+  setQueryType: (value: string) => console.log('User search query:', value),
+  queryType: 'email'
+};

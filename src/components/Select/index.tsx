@@ -32,15 +32,21 @@ const Select: React.FC<SelectProps> = ({
   useOutsideAlerter(wrapperRef, setIsFocused);
 
   const handleFocus = () => {
-    setIsFocused(true);
+    if (!disabled) {
+      setIsFocused(true);
+    }
   };
 
   const handleClick = () => {
-    setIsFocused(true);
+    if (!disabled) {
+      setIsFocused(true);
+    }
   };
 
   const handleSelectOption = (value: string) => {
-    setQueryType && setQueryType(value);
+    if (!disabled) {
+      setQueryType && setQueryType(value);
+    }
   };
 
   useEffect(() => {
@@ -69,6 +75,7 @@ const Select: React.FC<SelectProps> = ({
         tabIndex={4}
         aria-labelledby="label-finput"
         onFocus={handleFocus}
+        disabled={disabled}
       >
         {queryType ?? ''}
         <S.DownArrowContainer $isActive={isFocused}>{'▼'}</S.DownArrowContainer>

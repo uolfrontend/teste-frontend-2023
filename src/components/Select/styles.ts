@@ -36,6 +36,10 @@ interface DownArrowProps {
   $isActive: boolean;
 }
 
+interface selectElementProps {
+  disabled: boolean;
+}
+
 export const SelectContainer = styled.div<SelectContainerProps>`
   position: relative;
   width: 280px;
@@ -69,7 +73,7 @@ export const SelectContainer = styled.div<SelectContainerProps>`
 
 export const SelectElement = styled.div.attrs((props) => ({
   tabIndex: 0
-}))`
+}))<selectElementProps>`
   width: 100%;
   border: none;
   border-radius: ${(props) => getRadius('100', props)};
@@ -90,7 +94,15 @@ export const SelectElement = styled.div.attrs((props) => ({
 
   &:disabled {
     background: transparent;
+    color: ${(props) => getColorNeutral('medium-04', props)};
   }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      color: ${(props) => getColorNeutral('medium-04', props)};
+      cursor: not-allowed;
+    `};
 `;
 
 export const Label = styled.label<LabelProps>`
