@@ -55,7 +55,7 @@ export const TableHeader = styled.th`
   text-transform: uppercase;
   color: ${(props) => getColorNeutral('medium-02', props)};
   border-bottom: ${(props) =>
-    getStroke('100', props) + ' ' + getColorNeutral('medium-01', props)};
+    getStroke('100', props) + ' ' + getColorNeutral('medium-04', props)};
 
   padding-right: ${(props) => getSpacing('micro', props)};
 
@@ -73,7 +73,7 @@ export const TableCell = styled.td`
   font-size: ${(props) => getSize('base', props)};
   color: ${(props) => getColorNeutral('medium-01', props)};
   border-bottom: ${(props) =>
-    getStroke('100', props) + ' ' + getColorNeutral('medium-04', props)};
+    getStroke('100', props) + ' ' + getColorNeutral('light', props)};
   padding-right: ${(props) => getSpacing('micro', props)};
   padding-top: ${(props) => getSpacing('xxs', props)};
   padding-bottom: ${(props) => getSpacing('xxxs', props)};
