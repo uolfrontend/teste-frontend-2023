@@ -93,7 +93,7 @@ export const TableWrapper = styled.div<TableWrapperProps>`
   justify-content: center;
 
   border: ${(props) =>
-    getStroke('100', props) + getColorNeutral('medium-02', props)};
+    getStroke('100', props) + getColorNeutral('medium-04', props)};
   padding: ${(props) =>
     getSpacing('xs', props) + //top
     ' ' +
