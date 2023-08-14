@@ -1,0 +1,109 @@
+{
+    "customers": [
+        {
+            "id": "543.210.987-65",
+            "name": "Isabella Santos",
+            "email": "isabella.santos@email.com",
+            "phone": "(11) 91234-5678",
+            "status": "active"
+        },
+        {
+            "id": "123.456.789-01",
+            "name": "Lucas Oliveira",
+            "email": "lucas.oliveira@email.com",
+            "phone": "(11) 98765-4321",
+            "status": "inactive"
+        },
+        {
+            "id": "987.654.321-09",
+            "name": "Julia Costa",
+            "email": "julia.costa@email.com",
+            "phone": "(11) 92345-6789",
+            "status": "waiting"
+        },
+        {
+            "id": "654.321.987-06",
+            "name": "Matheus Alves",
+            "email": "matheus.alves@email.com",
+            "phone": "(11) 94567-8901",
+            "status": "disabled"
+        },
+        {
+            "id": "246.813.579-03",
+            "name": "Giovanna Rodrigues",
+            "email": "giovanna.rodrigues@email.com",
+            "phone": "(11) 93456-7890",
+            "status": "active"
+        },
+        {
+            "id": "135.792.468-02",
+            "name": "Rafael Lima",
+            "email": "rafael.lima@email.com",
+            "phone": "(11) 91234-5678",
+            "status": "inactive"
+        },
+        {
+            "id": "579.246.813-00",
+            "name": "Mariana Santos",
+            "email": "mariana.santos@email.com",
+            "phone": "(11) 92345-6789",
+            "status": "waiting"
+        },
+        {
+            "id": "802.467.135-05",
+            "name": "Enzo Ferreira",
+            "email": "enzo.ferreira@email.com",
+            "phone": "(11) 94567-8901",
+            "status": "disabled"
+        },
+        {
+            "id": "369.258.147-08",
+            "name": "Sophia Costa",
+            "email": "sophia.costa@email.com",
+            "phone": "(11) 93456-7890",
+            "status": "active"
+        },
+        {
+            "id": "741.852.963-04",
+            "name": "Pedro Martins",
+            "email": "pedro.martins@email.com",
+            "phone": "(11) 91234-5678",
+            "status": "inactive"
+        },
+        {
+            "id": "951.753.852-01",
+            "name": "Lara Oliveira",
+            "email": "lara.oliveira@email.com",
+            "phone": "(11) 92345-6789",
+            "status": "waiting"
+        },
+        {
+            "id": "123.456.789-99",
+            "name": "João Silva",
+            "email": "joao.silva@email.com",
+            "phone": "(11) 94567-8901",
+            "status": "disabled"
+        },
+        {
+            "id": "987.654.321-00",
+            "name": "Fernanda Sousa",
+            "email": "fernanda.sousa@email.com",
+            "phone": "(11) 93456-7890",
+            "status": "active"
+        },
+        {
+            "id": "555.666.777-88",
+            "name": "Ricardo Santos",
+            "email": "ricardo.santos@email.com",
+            "phone": "(11) 91234-5678",
+            "status": "inactive"
+        },
+        {
+            "id": "444.333.222-11",
+            "name": "Vanessa Ferreira",
+            "email": "vanessa.ferreira@email.com",
+            "phone": "(11) 92345-6789",
+            "status": "waiting"
+        }
+    ]
+}
