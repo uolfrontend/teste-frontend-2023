@@ -32,6 +32,12 @@ Então, instale utilizando o NPM (ou YARN)
 npm install
 ```
 
+Duplique o arquivo `.env.example` e o nomeie para `.env`, pois é necessário para ter informaçâo da API
+
+```bash
+cp .env.example .env
+```
+
 ## Comandos de execução
 
 Dentro do diretório do projeto, pode-se rodar os scripts:
