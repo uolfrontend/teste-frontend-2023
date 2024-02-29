@@ -1,13 +1,16 @@
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 
 import './Styles/Main.scss';
+
+import routes from './routes';
 
 function App() {
   return (
     <div className='main-app'>
-      <header className='header'>
-        <p>Main Area</p>
-      </header>
+      <main className='main'>
+        <RouterProvider router={routes} />
+      </main>
     </div>
   );
 }
