@@ -2,7 +2,13 @@ import React, { ChangeEvent, useState } from 'react';
 
 import { InputProps } from './types';
 
-const Input = ({ name, label, placeholder, ...props }: InputProps) => {
+const Input = ({
+  name,
+  label,
+  placeholder,
+  onChange = () => {},
+  ...props
+}: InputProps) => {
   const [value, setValue] = useState('');
 
   return (
@@ -14,6 +20,7 @@ const Input = ({ name, label, placeholder, ...props }: InputProps) => {
         className={`input ${value.length ? 'hasValue' : ''}`}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           setValue(e.target.value);
+          onChange(e);
         }}
         {...props}
       />
