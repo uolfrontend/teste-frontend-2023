@@ -83,3 +83,8 @@ scripts copiados para que você possa ajustá-los. Neste ponto você está sozin
 Você nunca precisa usar `eject`. O conjunto de recursos selecionados é adequado para implantações
 pequenas e médias e você não deve se sentir obrigado a usar esse recurso. No entanto, entendemos
 que esta ferramenta não seria útil se você não pudesse personalizá-la quando estiver pronto para isso.
+
+## Melhorias
+
+Arquivo routes "solto" na pasta Source
+Página Customers é apenas um bloco, mas está juntos às páginas
