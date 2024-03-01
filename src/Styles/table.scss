@@ -1,0 +1,72 @@
+$breakpoint-alpha: 480px;
+
+table {
+  &.table {
+    width: 100%;
+    text-align: left;
+    padding: 0px $spacing-xs $spacing-xxs;
+    background-color: $color-neutral-lightest;
+    border: $stroke-100 solid $color-neutral-medium-04;
+    border-radius: $radius-300;
+    border-spacing: 0;
+    overflow: hidden;
+    min-width: 300px; // adjust to your needs
+
+    thead th {
+      color: $color-neutral-medium-02;
+      border-bottom: 1px solid $color-neutral-medium-04;
+      padding: $spacing-xs 0 $spacing-micro $spacing-micro;
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+
+      @media (min-width: $breakpoint-alpha) {
+        position: relative;
+        top: unset;
+        left: unset;
+      }
+    }
+
+    tbody td {
+      color: $color-neutral-medium-01;
+      padding: $spacing-xxxs $spacing-micro;
+      display: block;
+
+      &:first-child {
+        padding-top: $spacing-xs;
+
+        @media (min-width: $breakpoint-alpha) {
+          padding-top: $spacing-xxxs;
+        }
+      }
+
+      &:last-child {
+        padding-bottom: $spacing-xs;
+        border-bottom: 1px solid $color-neutral-light;
+
+        @media (min-width: $breakpoint-alpha) {
+          padding-bottom: $spacing-micro;
+        }
+      }
+
+      &:before {
+        content: attr(data-label);
+        color: $color-neutral-medium-02;
+        font-weight: $font-weight-bold;
+        display: block;
+        width: 100%;
+        margin-bottom: $spacing-nano;
+
+        @media (min-width: $breakpoint-alpha) {
+          display: none;
+        }
+      }
+
+      @media (min-width: $breakpoint-alpha) {
+        display: table-cell;
+        padding: $spacing-xxxs 0 $spacing-xxxs $spacing-micro;
+        border-bottom: 1px solid $color-neutral-light;
+      }
+    }
+  }
+}
