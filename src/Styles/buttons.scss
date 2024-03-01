@@ -5,8 +5,8 @@ button {
     border-radius: $radius-300;
     color: $color-neutral-lightest;
     line-height: $line-height-tightest;
+    cursor: pointer;
 
-    // Default variation
     &,
     &.size-md {
       padding: $spacing-squish-md;
