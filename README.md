@@ -84,7 +84,7 @@ Você nunca precisa usar `eject`. O conjunto de recursos selecionados é adequad
 pequenas e médias e você não deve se sentir obrigado a usar esse recurso. No entanto, entendemos
 que esta ferramenta não seria útil se você não pudesse personalizá-la quando estiver pronto para isso.
 
-## Melhorias
+## Propostas de Melhorias
 
 Arquivo routes "solto" na pasta Source
 Página Customers é apenas um bloco, mas está juntos às páginas
