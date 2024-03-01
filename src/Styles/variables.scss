@@ -1,0 +1,78 @@
+// Colors
+$font-family-default: 'Roboto';
+
+$color-transparent: transparent;
+$color-action-lightest: #b9d7e8;
+$color-action-light: #529ec6;
+$color-action-medium: #0070ab;
+$color-action-dark: #005582;
+$color-action-darkest: #004266;
+$color-neutral-lightest: #ffffff;
+$color-neutral-light: #ececec;
+$color-neutral-medium-04: #cccccc;
+$color-neutral-medium-03: #999999;
+$color-neutral-medium-02: #666666;
+$color-neutral-medium-01: #444444;
+$color-neutral-dark: #202020;
+$color-neutral-darkest: #000000;
+$color-alert-info: #3255e2;
+$color-alert-success: #0a7c2f;
+$color-alert-attention: #ebbc03;
+$color-alert-error: #cc001b;
+$color-alert-info-dark-theme: #b7cce3;
+$color-alert-success-dark-theme: #b5eac6;
+$color-alert-attention-dark-theme: #ffdd96;
+$color-alert-error-dark-theme: #efb4ba;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-base: 16px;
+$font-size-nano: 0.75rem;
+$font-size-micro: 0.875rem;
+$font-size-xxs: 1.125rem;
+$font-size-xs: 1.25rem;
+$font-size-sm: 1.5rem;
+$font-size-md: 2rem;
+
+$font-size-lg: 2.5rem;
+$font-size-xl: 3rem;
+$font-size-xxl: 3.5rem;
+$font-size-xxxl: 4.5rem;
+$font-size-giant: 5.5rem;
+$font-size-huge: 6.5rem;
+
+$line-height-tightest: 1rem;
+$line-height-tight: 1.3rem;
+$line-height-medium: 1.5rem;
+$line-height-loose: 1.7rem;
+
+$spacing-nano: 4px;
+$spacing-micro: 8px;
+$spacing-xxxs: 12px;
+$spacing-xxs: 16px;
+$spacing-xs: 24px;
+$spacing-sm: 32px;
+$spacing-md: 40px;
+$spacing-lg: 56px;
+$spacing-xl: 80px;
+$spacing-xxl: 120px;
+$spacing-giant: 160px;
+$spacing-huge: 200px;
+$spacing-squish-nano: 4px 8px;
+$spacing-squish-micro: 8px 16px;
+$spacing-squish-sm: 12px 24px;
+$spacing-squish-md: 16px 32px;
+$spacing-squish-lg: 24px 48px;
+$stroke-100: 1px;
+$stroke-200: 2px;
+$stroke-300: 4px;
+$stroke-400: 6px;
+$stroke-500: 8px;
+$radius-100: 1px;
+$radius-200: 2px;
+$radius-300: 4px;
+$radius-400: 16px;
+$radius-pill: 100vh;
