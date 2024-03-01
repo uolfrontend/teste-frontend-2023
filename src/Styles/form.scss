@@ -26,6 +26,11 @@ input {
     border-radius: $radius-200;
     padding: $spacing-xxxs $spacing-xxs;
     color: $color-neutral-dark;
+    width: 100%;
+
+    @media (min-width: $breakpoint-xs) {
+      width: auto;
+    }
 
     & + label {
       display: none;
