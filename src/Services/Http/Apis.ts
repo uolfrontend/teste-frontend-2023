@@ -1,22 +1,35 @@
-import { CustomerApiResponseType } from './Api.types';
-import MockCustomers from './mocks/customers.mock.json';
+/**
+ * Dá para melhorar bastante este arquivo,
+ * separando em arquivos e criando múltiplas instâncias e reuso do fetch
+ * Veja: https://github.com/hfisaquiel/js-service-proxy-scaffold/tree/master/Services/Http
+ */
 
-const baseRootApi = process.env.REACT_APP_API_URL;
+import { CustomerApiResponseType } from './Api.types';
+
+/**
+ * Tive de criar um trabalho em volta ou solução de contorno (vulga gambiarra)
+ * para poder o navegador não bloquear as requisições
+ */
+const withProxy = process.env.REACT_APP_PROXY_API_ENABLED;
+
+const baseRootApi = withProxy
+  ? process.env.REACT_APP_PROXY_API_URL
+  : process.env.REACT_APP_API_URL;
+
 const customersApi = '/customers.json';
 
 const getCustomers = async (): Promise<CustomerApiResponseType> => {
   try {
     const response = await fetch(baseRootApi + customersApi, {
-      mode: 'navigate', // Inseguro, mas para fins demonstrativos
-      referrerPolicy: 'no-referrer-when-downgrade',
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     });
 
     return response.json();
   } catch (error) {
-    return MockCustomers;
+    return { customers: [] };
   }
 };
 
