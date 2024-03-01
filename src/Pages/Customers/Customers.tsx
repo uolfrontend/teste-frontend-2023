@@ -7,23 +7,23 @@ import { FieldsHeader } from '../../Components/Table/Containers/types';
 
 const tableHeaderColumns: FieldsHeader = {
   id: {
-    label: 'Id',
+    label: 'CPF',
     isVisible: true,
   },
   name: {
-    label: 'Name',
+    label: 'Nome',
     isVisible: true,
   },
   email: {
-    label: 'Email',
+    label: 'E-mail',
     isVisible: true,
   },
   phone: {
-    label: 'Phone',
+    label: 'Telefone',
     isVisible: true,
   },
   status: {
-    label: 'Status',
+    label: 'Situação',
     isVisible: true,
   },
 };
@@ -43,14 +43,14 @@ const Customers = () => {
   };
 
   return (
-    <div>
+    <>
       <Input
         name='filter'
         label='Filtrar por e-mail'
         onChange={onChangeFilter}
       />
       <Table items={customersFilteredList} fields={tableHeaderColumns} />
-    </div>
+    </>
   );
 };
 

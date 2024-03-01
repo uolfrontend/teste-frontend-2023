@@ -6,12 +6,16 @@ import Button from '../../Components/Button';
 const Home = () => {
   return (
     <>
-      <Link to='/customers'>
-        <Button size='sm' variation='primary'>
-          Exibir lista de Consumidores
-        </Button>
-      </Link>
-      <Outlet />
+      <header className='page-header'>
+        <Link to='/customers'>
+          <Button size='sm' variation='primary'>
+            Exibir lista de Consumidores
+          </Button>
+        </Link>
+      </header>
+      <div className='page-content'>
+        <Outlet />
+      </div>
     </>
   );
 };
