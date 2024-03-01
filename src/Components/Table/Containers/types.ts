@@ -12,6 +12,11 @@ export type Item = {
   [fieldName: string]: any;
 };
 
+export interface TableCellsProps {
+  columns: FieldsHeader;
+  item: Item;
+}
+
 export interface TableRowsProps {
   fields: FieldsHeader;
   items: Array<Item>;

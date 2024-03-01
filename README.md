@@ -2,7 +2,15 @@
 
 Este projeto é um desafio UOL para vagas de front-end
 
-md
+- [Desafio Front-end](#desafio-front-end)
+  - [Sobre as dependências](#sobre-as-dependências)
+  - [Como Instalar este projeto](#como-instalar-este-projeto)
+  - [Comandos de execução](#comandos-de-execução)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Propostas de Melhorias](#propostas-de-melhorias)
 
 ## Sobre as dependências
 
@@ -21,13 +29,21 @@ npm install react-scripts@latest
 ## Como Instalar este projeto
 
 Primeiro baixe o projeto
+
 ```bash
 git clone git@github.com:hfisaquiel/u-challenge.git
 ```
 
 Então, instale utilizando o NPM (ou YARN)
+
 ```bash
 npm install
+```
+
+Duplique o arquivo `.env.example` e o nomeie para `.env`, pois é necessário para ter informaçâo da API
+
+```bash
+cp .env.example .env
 ```
 
 ## Comandos de execução
@@ -40,7 +56,7 @@ Executa o aplicativo no modo de desenvolvimento.\
 Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
 
 A página será recarregada quando você fizer alterações.\
-Você também pode ver erros de *lint* no console.
+Você também pode ver erros de _lint_ no console.
 
 ### `npm test`
 
@@ -56,7 +72,7 @@ Ele agrupa corretamente o React no modo de produção e otimiza a construção p
 A compilação é reduzida e os nomes dos arquivos incluem os hashes.\
 Seu aplicativo está pronto para ser implantado!
 
-Consulte a seção sobre [implantação](https://facebook.github.io/create-react-app/docs/deployment) 
+Consulte a seção sobre [implantação](https://facebook.github.io/create-react-app/docs/deployment)
 para obter mais informações.
 
 ### `npm run eject`
@@ -75,3 +91,8 @@ scripts copiados para que você possa ajustá-los. Neste ponto você está sozin
 Você nunca precisa usar `eject`. O conjunto de recursos selecionados é adequado para implantações
 pequenas e médias e você não deve se sentir obrigado a usar esse recurso. No entanto, entendemos
 que esta ferramenta não seria útil se você não pudesse personalizá-la quando estiver pronto para isso.
+
+## Propostas de Melhorias
+
+Arquivo routes "solto" na pasta Source
+Página Customers é apenas um bloco, mas está juntos às páginas

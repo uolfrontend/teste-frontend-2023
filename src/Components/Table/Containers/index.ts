@@ -1,9 +1,11 @@
+import TableCells from './TableCells';
 import TableHeader from './TableHeader';
-import TableRow from './TableRow';
+import TableRows from './TableRows';
 
 const Containers = {
+  TableCells,
   TableHeader,
-  TableRow,
+  TableRows,
 };
 
 export default Containers;
