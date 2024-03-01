@@ -1,0 +1,40 @@
+{
+  "fields": {
+    "id": {
+      "label": "ID",
+      "isVisible": false
+    },
+    "name": {
+      "label": "Nome",
+      "isVisible": true
+    },
+    "city": {
+      "label": "Cidade",
+      "isVisible": true
+    },
+    "status": {
+      "label": "Situação",
+      "isVisible": true
+    }
+  },
+  "items": [
+    {
+      "id": "112SAJ34ASL3-3JSLJ340C340-32N4239",
+      "name": "Fulano de Tal",
+      "city": "São Paulo",
+      "status": "Ativo"
+    },
+    {
+      "id": "34SKJH2S3R98-HFMDDFKHJSDNSKHD-SKJ0U4OV",
+      "name": "Cicrano de Circus",
+      "city": "São Paulo",
+      "status": "Ativo"
+    },
+    {
+      "id": "NRT4KSDFNT9N-3LFJV48NSDVSD-SN3409VOH",
+      "name": "Beltrano de Bertrand",
+      "city": "Rio de Janeiro",
+      "status": "Excluído"
+    }
+  ]
+}
