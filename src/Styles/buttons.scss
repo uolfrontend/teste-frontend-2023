@@ -1,0 +1,65 @@
+button {
+  &.button {
+    font-weight: $font-weight-regular;
+    display: block;
+    border-radius: $radius-300;
+    color: $color-neutral-lightest;
+    line-height: $line-height-tightest;
+    cursor: pointer;
+
+    &,
+    &.size-md {
+      padding: $spacing-squish-md;
+      font-size: $font-size-xs;
+    }
+
+    &.size-lg {
+      padding: $spacing-squish-lg;
+      font-size: $font-size-sm;
+    }
+
+    &.size-sm {
+      padding: $spacing-squish-sm;
+      font-size: $font-size-base;
+    }
+
+    &,
+    &.primary {
+      border: none;
+      background-color: $color-action-medium;
+
+      &:hover {
+        background-color: $color-action-light;
+      }
+
+      &:active {
+        background-color: $color-action-dark;
+      }
+    }
+
+    &.secondary {
+      background-color: $color-transparent;
+      border-width: $stroke-100;
+      border-color: $color-action-medium;
+      border-style: solid;
+      color: $color-action-medium;
+
+      &:hover {
+        background-color: $color-action-medium;
+        color: $color-neutral-light;
+      }
+
+      &:active {
+        background-color: $color-action-dark;
+        color: $color-neutral-light;
+      }
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      background-color: $color-action-lightest;
+      border: none;
+      color: $color-neutral-lightest;
+    }
+  }
+}
