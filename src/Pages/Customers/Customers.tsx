@@ -35,7 +35,7 @@ const Customers = () => {
   };
 
   const customersFilteredList = useMemo(() => {
-    return (customers || []).filter((item) => item.email.match(filterBy));
+    return (customers || []).filter((item) => item.email.includes(filterBy));
   }, [customers, filterBy]);
 
   const onChangeFilter = (e: ChangeEvent<HTMLInputElement>) => {
