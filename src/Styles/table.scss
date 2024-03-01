@@ -67,6 +67,12 @@ table {
         padding: $spacing-xxxs 0 $spacing-xxxs $spacing-micro;
         border-bottom: 1px solid $color-neutral-light;
       }
+
+      &.empty-table-data {
+        color: $color-alert-info-dark-theme;
+        font-weight: $font-weight-bold;
+        text-align: center;
+      }
     }
   }
 }
