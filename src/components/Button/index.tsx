@@ -1,10 +1,12 @@
+import { ButtonHTMLAttributes } from 'react'
 import * as S from './styles'
 
-interface IButton {
+interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   textButton?: string
   size?: 'small' | 'medium' | 'large'
   variation?: 'primary' | 'secondary'
   disabled?: boolean
+  isLoading?: boolean
 }
 
 export function Button({
@@ -12,11 +14,17 @@ export function Button({
   size = 'small',
   variation = 'primary',
   disabled = false,
+  isLoading = false,
+  ...rest
 }: IButton) {
-  console.log(disabled)
   return (
-    <S.Button $size={size} $variation={variation} $disabled={disabled}>
-      {textButton}
+    <S.Button
+      {...rest}
+      $size={size}
+      $variation={variation}
+      $disabled={disabled}
+    >
+      {isLoading ? 'loading...' : textButton}
     </S.Button>
   )
 }

@@ -4,7 +4,7 @@ import { Container } from './styles'
 export function Home() {
   return (
     <Container>
-      <Button size='small' variation='secondary' />
+      <Button size='small' variation='primary' />
     </Container>
   )
 }
