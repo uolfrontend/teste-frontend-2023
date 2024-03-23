@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: ${({ theme }) => theme.font.family};
+    font-family: ${({ theme }) => theme.font.family.default};
+  }
+
+  button {
+    border: none;
+    outline: none;
   }
 `

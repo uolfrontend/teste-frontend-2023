@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 50px;
-  height: 50px;
-  background-color: ${({ theme }) => theme.color.action.darkest};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 `

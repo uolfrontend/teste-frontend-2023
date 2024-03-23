@@ -29,7 +29,9 @@ export const defaultTheme = {
     },
   },
   font: {
-    family: 'Roboto',
+    family: {
+      default: 'Roboto',
+    },
     weight: {
       light: 300,
       regular: 400,
@@ -72,19 +74,21 @@ export const defaultTheme = {
     giant: '10rem',
     huge: '12.5rem',
   },
-  padding: {
+  spacingSquish: {
     nano: '0.25rem 0.5rem',
     micro: '0.5rem 1rem',
     sm: '0.75rem 1.5rem',
     md: '1rem 2rem',
     lg: '1.5rem 3rem',
   },
-  linesEdges: {
-    stroke100: '0.0625rem solid',
-    stroke200: '0.125rem solid',
-    stroke300: '0.25rem solid',
-    stroke400: '0.375rem solid',
-    stroke500: '0.5rem solid',
+  lines: {
+    stroke100: '0.0625rem',
+    stroke200: '0.125rem',
+    stroke300: '0.25rem',
+    stroke400: '0.375rem',
+    stroke500: '0.5rem',
+  },
+  edges: {
     radius100: '0.0625rem',
     radius200: '0.125rem',
     radius300: '0.25rem',
