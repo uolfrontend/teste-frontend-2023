@@ -1,12 +1,5 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`
-
 export const Table = styled.table`
   background-color: ${({ theme }) => theme.color.neutral.lightest};
   border-width: ${({ theme }) => theme.lines.stroke100};
@@ -40,7 +33,7 @@ export const Table = styled.table`
     display: none;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .mobile-table {
       display: initial;
     }
