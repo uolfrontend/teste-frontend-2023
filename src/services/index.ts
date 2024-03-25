@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios'
 import { api } from './axios'
 
 export async function getCustomers() {
@@ -8,6 +9,8 @@ export async function getCustomers() {
 
     return data
   } catch (error) {
-    console.log(error)
+    const AxiosError = error as AxiosError
+
+    return AxiosError.response?.data
   }
 }

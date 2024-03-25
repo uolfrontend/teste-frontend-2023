@@ -13,9 +13,6 @@ export function Home() {
   const [hasResults, setHasResults] = useState(false)
   const [resultNotFound, setResultNotFound] = useState(false)
 
-  console.log({ customers })
-  console.log({ filteredCustomers })
-
   async function handleGetCustomers() {
     try {
       setIsLoading(true)
