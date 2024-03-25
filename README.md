@@ -1,29 +1,72 @@
 # Teste Front-end - UOL - Colab
 
-### Sobre o desafio
+## Sobre o desafio
 
-O desafio consiste em criar componentes de acordo com especificações de um design system, aplicando no CSS um tema pré-definido com tokens de cor, espaçamento, entre outros. Com os componentes criados, a aplicação deve ser capaz de bater em um endpoint e imprimir na tela os dados obtidos como resultado. Deve haver um campo para que o usuário filtre os dados de acordo com o que procura.
+- Desafio técnico para demonstrar habilidade em criar componentes de acordo com especificações de um design e de funcionalidades, para que a aplicação possa ser interativa com o usuário e responsiva para rodar em qualquer dispositivo.
 
-### Material
 
-- [Handoff dos componentes](https://xd.adobe.com/view/9789f7fc-9a9f-49b6-a434-0cd07f25c991-c2da/)
-- [Endpoint](https://test-frontend-uolpp.web.app/customers.json)
+## Processo de desenvolvimento do projeto
 
-### Stack
+- Comecei com a configuração inicial, instalando as bibliotecas de formatação do código. (Eslint e Prettier)
+- Em seguida comecei a criação do theme provider, reunindo as principais informações para a estilização do projeto, como: cores, fontes, espaçamentos, bordas etc, além de ajudar na organização, facilita na usabilidade, porque temos acesso a essas informações em qualquer parte da aplicação.
+- Criação do componente Button com todas as suas variações de cores e estados.
+- Criação e configuração dos serviços de chamada a api. Nessa parte tive um erro de CORS.
 
-O desafio deve ser feito obrigatoriamente em React. Para o CSS, não há uma definição, podendo ser de escolha da pessoa realizadora. Outras bibliotecas também podem ser usadas caso haja necessidade.
+Tentei aplicar alternativas para conseguir acessos aos dados:
+- Primeiramente adicionei Access-Control-Allow-Origin no headers, sem muito sucesso. 
+- Tentei utilizar o CORS Anywhere, que é um proxy NodeJS que adiciona cabeçalhos CORS à solicitação com proxy.
+- E por fim tentei proxy configurado na aplicação, utilizei as orientações da documentação do Vite, mas o axios me retornou erro novamente, aparentemente a chamada estava sendo feita na URL do front, a resposta da chamada era o html do front.
+- Então devido a essas situações, eu não consegui pegar as informações do back end da UOL, mas também não poderia deixar a aplicação incompleta. Então resolvi utilizar o JSON Server, que é uma biblioteca JavaScript que permite criar rapidamente uma API REST simulada com base em um arquivo JSON.
+- Depois comecei a desenvolver a tabela onde foram exibidos os dados dos clientes, conseguir exibir os dados, aplicar a estilização proposta, e fazer o responsivo.
+- E para finalizar o input de busca por email, exibindo de forma instantânea o resultado da busca na listagem da tabela.
 
-### Fluxo da aplicação
+## Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
+  * React (Vite)
+  * Typescript
+  * Styled Components
+  * Json-server
+  * Axios
+  * Eslint
+  * Prettier
 
-A aplicação deve iniciar em uma página com um botão para baixar os dados do endpoint e mostrá-los em tela através da Tabela. O usuário deve ser capaz de filtrar por email, fazendo com que a tabela mostre apenas o item que contenha o que foi inserido no Input.
+## Instalação e incialização do projeto
 
-### Itens obrigatórios
+- Abra o terminal e clone o repositório com o comando
 
-- Utilizar os tokens fornecidos.
-- Criar todos os componentes do handoff, com as respectivas variações.
-- Imprimir os dados do endpoint usando o componente Tabela.
-- Documentação para rodar o projeto.
+```
+git clone https://github.com/paulobr4z/teste-frontend-2023.git
+```
+- Entre na pasta com 
 
-### Finalização
+```
+cd teste-frontend-2023
+```
 
-Ao finalizar seu teste nos envie um **pull request**.
+- Instale as dependências do projeto
+
+```
+npm install
+```
+
+- Rode o aplicação
+
+```
+npm run dev
+```
+- Crie um arquivo .env para a comunicação da aplicação com o servidor (json-server)
+
+```
+VITE_API_BASE_URL=http://localhost:3000/
+```
+
+- Abra outro terminal para rodar o servidor (json-server)
+
+```
+npm run server
+```
+
+- Url do end-point do o servidor (json-server)
+
+```
+http://localhost:3000/customers
+```
